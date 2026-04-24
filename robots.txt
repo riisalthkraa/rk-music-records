@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://riisalthkraal.github.io/rk-site/sitemap.xml

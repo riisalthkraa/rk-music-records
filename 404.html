@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>404 — R/K</title>
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rakkas&family=IBM+Plex+Mono:wght@300;400&family=Oswald:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #050505;
+  color: #e8e4dc;
+  font-family: 'IBM Plex Mono', monospace;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent 0px, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 3px);
+  pointer-events: none;
+  z-index: 2;
+}
+.container {
+  position: relative;
+  z-index: 3;
+  max-width: 600px;
+}
+.logo { height: 32px; margin-bottom: 3rem; opacity: 0.8; }
+.ar {
+  font-family: 'Rakkas', serif;
+  font-size: 8rem;
+  color: #d42538;
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.num {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: clamp(5rem, 15vw, 10rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+}
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: #a8a49c;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+}
+.meta {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: #a8a49c;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.meta::before, .meta::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: #d42538;
+}
+.btn {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 1.1rem 2.2rem;
+  color: #e8e4dc;
+  border: 1px solid #e8e4dc;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s, border-color 0.4s;
+  z-index: 1;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #d42538;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: -1;
+}
+.btn:hover { color: #fff; border-color: #d42538; }
+.btn:hover::before { transform: translateY(0); }
+.glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 600px; height: 600px;
+  background: radial-gradient(ellipse, rgba(212,37,56,0.15) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="container">
+  <img src="assets/rk-logo.png" alt="R/K" class="logo" />
+  <div class="ar">ضائع</div>
+  <div class="num">404</div>
+  <h1>"Cette page s'est perdue dans le cycle."</h1>
+  <div class="meta">PAGE INTROUVABLE</div>
+  <a href="/" class="btn">Retour à l'archive →</a>
+</div>
+</body>
+</html>
