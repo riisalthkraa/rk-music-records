@@ -1249,6 +1249,51 @@ section {
   transform: translateY(-50%);
 }
 
+/* ========== PLAY COUNTERS ========== */
+.play-counter {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--bone-dim);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  opacity: 0;
+  animation: fadeIn 0.6s 0.3s forwards;
+}
+.play-counter::before {
+  content: '▶';
+  color: var(--rk-red);
+  font-size: 0.55rem;
+}
+.play-counter.bumped {
+  animation: counterBump 0.5s ease-out;
+  color: var(--rk-red);
+}
+@keyframes counterBump {
+  0% { transform: scale(1); color: var(--rk-red); }
+  40% { transform: scale(1.3); color: var(--rk-red); }
+  100% { transform: scale(1); color: var(--bone-dim); }
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Single items list */
+.single-item .play-counter {
+  margin-top: 0.25rem;
+}
+
+/* Featured singles - compteur dans le meta */
+.featured-single-meta .play-counter {
+  margin-left: 0.6rem;
+}
+
+/* Preview cards - compteur dans le meta */
+.preview-meta .play-counter {
+  margin-left: 0.4rem;
+}
+
 /* ========== UPCOMING / PREVIEWS ========== */
 .upcoming {
   background: linear-gradient(180deg, var(--black-deep) 0%, var(--black) 100%);
@@ -1771,35 +1816,35 @@ footer {
   <div class="singles-subtitle reveal">EN AVANT</div>
 
   <div class="featured-singles">
-    <a href="https://www.youtube.com/watch?v=KlnfQlcp9pE" target="_blank" rel="noopener" class="featured-single reveal">
+    <a href="https://www.youtube.com/watch?v=KlnfQlcp9pE" target="_blank" rel="noopener" class="featured-single reveal" data-counter-key="rk-music-records-kelb" data-counter-type="click">
       <div class="featured-single-img" style="background-image: url('assets/silence.png');"></div>
       <div class="featured-single-info">
         <div class="featured-single-title">KELB <span class="featured-single-title-ar">الكلب</span></div>
         <div class="featured-single-meta">
           <span>EGO TRIP · AVRIL 2026</span>
-          <span class="play">Écouter →</span>
+          <span class="play-counter" data-counter-display="rk-music-records-kelb">—</span><span class="play">Écouter →</span>
         </div>
       </div>
     </a>
 
-    <a href="https://www.youtube.com/watch?v=XXAeY5ihoRM" target="_blank" rel="noopener" class="featured-single reveal">
+    <a href="https://www.youtube.com/watch?v=XXAeY5ihoRM" target="_blank" rel="noopener" class="featured-single reveal" data-counter-key="rk-music-records-khouya" data-counter-type="click">
       <div class="featured-single-img" style="background-image: url('assets/hero-rain.png');"></div>
       <div class="featured-single-info">
         <div class="featured-single-title">KHOUYA <span class="featured-single-title-ar">خويا</span></div>
         <div class="featured-single-meta">
           <span>TRAHISON · AVRIL 2026</span>
-          <span class="play">Écouter →</span>
+          <span class="play-counter" data-counter-display="rk-music-records-khouya">—</span><span class="play">Écouter →</span>
         </div>
       </div>
     </a>
 
-    <a href="https://www.youtube.com/watch?v=BLRf9V71wpE" target="_blank" rel="noopener" class="featured-single reveal">
+    <a href="https://www.youtube.com/watch?v=BLRf9V71wpE" target="_blank" rel="noopener" class="featured-single reveal" data-counter-key="rk-music-records-l7enna" data-counter-type="click">
       <div class="featured-single-img" style="background-image: url('assets/l7enna-henna.png');"></div>
       <div class="featured-single-info">
         <div class="featured-single-title">L7ENNA <span class="featured-single-title-ar">الحنّة</span></div>
         <div class="featured-single-meta">
           <span>MARIAGE · AVRIL 2026</span>
-          <span class="play">Écouter →</span>
+          <span class="play-counter" data-counter-display="rk-music-records-l7enna">—</span><span class="play">Écouter →</span>
         </div>
       </div>
     </a>
@@ -1808,59 +1853,59 @@ footer {
   <div class="singles-subtitle reveal">ARCHIVE RÉCENTE</div>
 
   <div class="singles-grid">
-    <a href="https://www.youtube.com/watch?v=BZ1D2kNz6Y4" target="_blank" rel="noopener" class="single-item reveal">
+    <a href="https://www.youtube.com/watch?v=BZ1D2kNz6Y4" target="_blank" rel="noopener" class="single-item reveal" data-counter-key="rk-music-records-doublage" data-counter-type="click">
       <span class="single-num">→ 04</span>
       <div class="single-info">
         <div class="single-title">DOUBLAGE <span class="single-title-ar">دوبلاج</span></div>
-        <div class="single-meta">DOUBLE IDENTITÉ · AVRIL 2026</div>
+        <div class="single-meta">DOUBLE IDENTITÉ · AVRIL 2026 <span class="play-counter" data-counter-display="rk-music-records-doublage">—</span></div>
       </div>
       <span class="single-arrow">Écouter ↗</span>
     </a>
-    <a href="https://www.youtube.com/watch?v=eDcgOUpfC_Y" target="_blank" rel="noopener" class="single-item reveal">
+    <a href="https://www.youtube.com/watch?v=eDcgOUpfC_Y" target="_blank" rel="noopener" class="single-item reveal" data-counter-key="rk-music-records-chnou-fr" data-counter-type="click">
       <span class="single-num">→ 05</span>
       <div class="single-info">
         <div class="single-title">CHNOU WLLINA? <span class="single-title-ar">FR</span></div>
-        <div class="single-meta">VERSION FRANÇAISE · AVRIL 2026</div>
+        <div class="single-meta">VERSION FRANÇAISE · AVRIL 2026 <span class="play-counter" data-counter-display="rk-music-records-chnou-fr">—</span></div>
       </div>
       <span class="single-arrow">Écouter ↗</span>
     </a>
-    <a href="https://www.youtube.com/watch?v=PPvU2NI-RMA" target="_blank" rel="noopener" class="single-item reveal">
+    <a href="https://www.youtube.com/watch?v=PPvU2NI-RMA" target="_blank" rel="noopener" class="single-item reveal" data-counter-key="rk-music-records-chnou-da" data-counter-type="click">
       <span class="single-num">→ 06</span>
       <div class="single-info">
         <div class="single-title">CHNOU WLLINA? <span class="single-title-ar">شنو ولينا</span></div>
-        <div class="single-meta">CRITIQUE SOCIALE · AVRIL 2026</div>
+        <div class="single-meta">CRITIQUE SOCIALE · AVRIL 2026 <span class="play-counter" data-counter-display="rk-music-records-chnou-da">—</span></div>
       </div>
       <span class="single-arrow">Écouter ↗</span>
     </a>
-    <a href="https://www.youtube.com/watch?v=MBKAoVQZdVA" target="_blank" rel="noopener" class="single-item reveal">
+    <a href="https://www.youtube.com/watch?v=MBKAoVQZdVA" target="_blank" rel="noopener" class="single-item reveal" data-counter-key="rk-music-records-fantome" data-counter-type="click">
       <span class="single-num">→ 07</span>
       <div class="single-info">
         <div class="single-title">FANTÔME</div>
-        <div class="single-meta">INDUSTRIE DU RAP · AVRIL 2026</div>
+        <div class="single-meta">INDUSTRIE DU RAP · AVRIL 2026 <span class="play-counter" data-counter-display="rk-music-records-fantome">—</span></div>
       </div>
       <span class="single-arrow">Écouter ↗</span>
     </a>
-    <a href="https://www.youtube.com/watch?v=lkC_HhJcVJw" target="_blank" rel="noopener" class="single-item reveal">
+    <a href="https://www.youtube.com/watch?v=lkC_HhJcVJw" target="_blank" rel="noopener" class="single-item reveal" data-counter-key="rk-music-records-vitrine" data-counter-type="click">
       <span class="single-num">→ 08</span>
       <div class="single-info">
         <div class="single-title">VITRINE</div>
-        <div class="single-meta">DEUX FRANCES · AVRIL 2026</div>
+        <div class="single-meta">DEUX FRANCES · AVRIL 2026 <span class="play-counter" data-counter-display="rk-music-records-vitrine">—</span></div>
       </div>
       <span class="single-arrow">Écouter ↗</span>
     </a>
-    <a href="https://www.youtube.com/watch?v=NQUkMh33sGg" target="_blank" rel="noopener" class="single-item reveal">
+    <a href="https://www.youtube.com/watch?v=NQUkMh33sGg" target="_blank" rel="noopener" class="single-item reveal" data-counter-key="rk-music-records-chere-france" data-counter-type="click">
       <span class="single-num">→ 09</span>
       <div class="single-info">
         <div class="single-title">CHÈRE FRANCE</div>
-        <div class="single-meta">IDENTITÉ · MARS 2026</div>
+        <div class="single-meta">IDENTITÉ · MARS 2026 <span class="play-counter" data-counter-display="rk-music-records-chere-france">—</span></div>
       </div>
       <span class="single-arrow">Écouter ↗</span>
     </a>
-    <a href="https://www.youtube.com/watch?v=2G5J6APaOss" target="_blank" rel="noopener" class="single-item reveal">
+    <a href="https://www.youtube.com/watch?v=2G5J6APaOss" target="_blank" rel="noopener" class="single-item reveal" data-counter-key="rk-music-records-van-dijk" data-counter-type="click">
       <span class="single-num">→ 10</span>
       <div class="single-info">
         <div class="single-title">VAN DIJK</div>
-        <div class="single-meta">HOMMAGE FOOT · MARS 2026</div>
+        <div class="single-meta">HOMMAGE FOOT · MARS 2026 <span class="play-counter" data-counter-display="rk-music-records-van-dijk">—</span></div>
       </div>
       <span class="single-arrow">Écouter ↗</span>
     </a>
@@ -1890,170 +1935,170 @@ footer {
 
   <div class="previews-grid">
 
-    <div class="preview-card reveal" data-title="BQITI">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-bqiti" data-counter-type="audio" data-title="BQITI">
       <button class="play-btn" aria-label="Lire BQITI">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">BQITI <span class="preview-title-ar">بقيتي</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-bqiti">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/bqiti.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="DAR BABA">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-dar-baba" data-counter-type="audio" data-title="DAR BABA">
       <button class="play-btn" aria-label="Lire DAR BABA">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">DAR BABA <span class="preview-title-ar">دار بابا</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-dar-baba">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/dar-baba.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="L3RS">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-l3rs" data-counter-type="audio" data-title="L3RS">
       <button class="play-btn" aria-label="Lire L3RS">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">L3RS <span class="preview-title-ar">العرس</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-l3rs">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/l3rs.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="PILOTE AUTOMATIQUE">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-pilote" data-counter-type="audio" data-title="PILOTE AUTOMATIQUE">
       <button class="play-btn" aria-label="Lire PILOTE AUTOMATIQUE">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">PILOTE AUTOMATIQUE <span class="preview-title-ar">بيلوط أوطوماتيك</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-pilote">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/pilote-automatique.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="LBANT">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-lbant" data-counter-type="audio" data-title="LBANT">
       <button class="play-btn" aria-label="Lire LBANT">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">LBANT <span class="preview-title-ar">لبنت</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-lbant">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/lbant.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="HORS-JEU">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-hors-jeu" data-counter-type="audio" data-title="HORS-JEU">
       <button class="play-btn" aria-label="Lire HORS-JEU">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">HORS-JEU <span class="preview-title-ar">هورس جو</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-hors-jeu">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/hors-jeu.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="QMAR">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-qmar" data-counter-type="audio" data-title="QMAR">
       <button class="play-btn" aria-label="Lire QMAR">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">QMAR <span class="preview-title-ar">قمار</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-qmar">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/qmar.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="THÉÂTRE">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-theatre" data-counter-type="audio" data-title="THÉÂTRE">
       <button class="play-btn" aria-label="Lire THÉÂTRE">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">THÉÂTRE <span class="preview-title-ar">مسرح</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-theatre">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/theatre.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="WLAD DONYA">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-wlad-donya" data-counter-type="audio" data-title="WLAD DONYA">
       <button class="play-btn" aria-label="Lire WLAD DONYA">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">WLAD DONYA <span class="preview-title-ar">ولاد الدنيا</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-wlad-donya">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/wlad-donya.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="GUELBI">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-guelbi" data-counter-type="audio" data-title="GUELBI">
       <button class="play-btn" aria-label="Lire GUELBI">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">GUELBI <span class="preview-title-ar">ﮔﻠﺒﻲ</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-guelbi">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/guelbi.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="JNAZA DIAL HAY">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-jnaza" data-counter-type="audio" data-title="JNAZA DIAL HAY">
       <button class="play-btn" aria-label="Lire JNAZA DIAL HAY">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">JNAZA DIAL HAY <span class="preview-title-ar">جنازة ديال حي</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-jnaza">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/jnaza-dial-hay.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="LHOMMA">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-lhomma" data-counter-type="audio" data-title="LHOMMA">
       <button class="play-btn" aria-label="Lire LHOMMA">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">LHOMMA <span class="preview-title-ar">لحومة</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-lhomma">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/lhomma.mp3"></audio>
     </div>
 
-    <div class="preview-card reveal" data-title="YEMMA">
+    <div class="preview-card reveal" data-counter-key="rk-music-records-preview-yemma" data-counter-type="audio" data-title="YEMMA">
       <button class="play-btn" aria-label="Lire YEMMA">
         <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
       </button>
       <div class="preview-info">
         <div class="preview-title">YEMMA <span class="preview-title-ar">يمّا</span></div>
-        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span></div>
+        <div class="preview-meta"><span>PREVIEW 0:30</span><span class="preview-meta-dot"></span><span>À VENIR</span><span class="play-counter" data-counter-display="rk-music-records-preview-yemma">—</span></div>
       </div>
       <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span></div>
       <audio preload="none" src="assets/previews/yemma.mp3"></audio>
@@ -2285,7 +2330,100 @@ previewCards.forEach(card => {
   });
 });
 
-// ===== PARALLAX HERO =====
+// ===== PLAY COUNTERS (counterapi) =====
+const COUNTER_API = 'https://countapi.mileshilliard.com/api/v1';
+const counterCache = new Map();
+
+// Format les nombres : 1234 → 1.2K, 1234567 → 1.2M
+function formatCount(n) {
+  n = parseInt(n) || 0;
+  if (n >= 1000000) return (n / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+  if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+  return n.toString();
+}
+
+// Récupère et affiche tous les compteurs au chargement (en parallèle)
+async function loadAllCounters() {
+  const displays = document.querySelectorAll('[data-counter-display]');
+  const keys = [...new Set([...displays].map(el => el.dataset.counterDisplay))];
+
+  await Promise.all(keys.map(async (key) => {
+    try {
+      const res = await fetch(`${COUNTER_API}/get/${key}`);
+      let value = 0;
+      if (res.ok) {
+        const data = await res.json();
+        value = parseInt(data.value) || 0;
+      }
+      counterCache.set(key, value);
+      document.querySelectorAll(`[data-counter-display="${key}"]`).forEach(el => {
+        el.textContent = formatCount(value);
+      });
+    } catch (err) {
+      // En cas d'erreur, on cache juste le compteur
+      document.querySelectorAll(`[data-counter-display="${key}"]`).forEach(el => {
+        el.style.display = 'none';
+      });
+    }
+  }));
+}
+
+// Incrémente un compteur (avec anti-spam via sessionStorage)
+async function bumpCounter(key) {
+  // Anti-spam : 1 incrément par session par morceau
+  const sessionKey = `bumped:${key}`;
+  if (sessionStorage.getItem(sessionKey)) return;
+  sessionStorage.setItem(sessionKey, '1');
+
+  try {
+    const res = await fetch(`${COUNTER_API}/hit/${key}`);
+    if (res.ok) {
+      const data = await res.json();
+      const newValue = parseInt(data.value) || 0;
+      counterCache.set(key, newValue);
+      document.querySelectorAll(`[data-counter-display="${key}"]`).forEach(el => {
+        el.textContent = formatCount(newValue);
+        el.classList.add('bumped');
+        setTimeout(() => el.classList.remove('bumped'), 500);
+      });
+    }
+  } catch (err) {
+    // Échec silencieux
+  }
+}
+
+// Charge les compteurs au démarrage
+loadAllCounters();
+
+// === Singles YouTube : incrément au clic ===
+document.querySelectorAll('[data-counter-type="click"]').forEach(el => {
+  el.addEventListener('click', () => {
+    const key = el.dataset.counterKey;
+    if (key) bumpCounter(key);
+  });
+});
+
+// === Previews audio : incrément à 15 secondes d'écoute (50%) ===
+document.querySelectorAll('[data-counter-type="audio"]').forEach(card => {
+  const audio = card.querySelector('audio');
+  const key = card.dataset.counterKey;
+  if (!audio || !key) return;
+
+  let counted = false;
+
+  audio.addEventListener('timeupdate', () => {
+    if (counted) return;
+    if (audio.currentTime >= 15) {
+      counted = true;
+      bumpCounter(key);
+    }
+  });
+
+  // Reset si l'utilisateur arrête avant 15s pour pouvoir retenter dans la session
+  audio.addEventListener('ended', () => {
+    counted = false;
+  });
+});
 const heroPhoto = document.querySelector('.hero-photo');
 window.addEventListener('scroll', () => {
   const scrolled = window.pageYOffset;
