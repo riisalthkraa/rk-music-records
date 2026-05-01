@@ -1,0 +1,28 @@
+{
+  "name": "R/K — R/K™ MUSIC RECORDS",
+  "short_name": "R/K",
+  "description": "R/K, artiste rap indépendant en Darija. La tétralogie + Le Cycle + singles.",
+  "start_url": "/rk-music-records/",
+  "scope": "/rk-music-records/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#050505",
+  "theme_color": "#0a0a0a",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "categories": ["music", "entertainment"],
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

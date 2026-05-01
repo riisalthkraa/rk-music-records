@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://riisalthkraa.github.io/rk-music-records/</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://riisalthkraa.github.io/rk-music-records/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://riisalthkraa.github.io/rk-music-records/" />
+    <image:image>
+      <image:loc>https://riisalthkraa.github.io/rk-music-records/assets/og-image.png</image:loc>
+      <image:title>R/K — Artiste Rap Darija</image:title>
+      <image:caption>Photo officielle de R/K, artiste rap indépendant</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://riisalthkraa.github.io/rk-music-records/assets/rk-logo.png</image:loc>
+      <image:title>R/K™ MUSIC RECORDS — Logo officiel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://riisalthkraa.github.io/rk-music-records/assets/portrait-bw.jpg</image:loc>
+      <image:title>R/K — Portrait noir et blanc</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://riisalthkraa.github.io/rk-music-records/assets/silence.png</image:loc>
+      <image:title>KELB — Visuel single</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://riisalthkraa.github.io/rk-music-records/assets/hero-rain.png</image:loc>
+      <image:title>KHOUYA — Visuel single</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://riisalthkraa.github.io/rk-music-records/assets/l7enna-henna.png</image:loc>
+      <image:title>L7ENNA — Visuel single</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://riisalthkraa.github.io/rk-music-records/assets/marrakech.png</image:loc>
+      <image:title>R/K — Marrakech</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://riisalthkraa.github.io/rk-music-records/assets/rooftop-rain.png</image:loc>
+      <image:title>R/K — Rooftop Rain</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://riisalthkraa.github.io/rk-music-records/404.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
   </url>
 </urlset>
